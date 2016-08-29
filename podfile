@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+pod 'UIColor_Hex_Swift'
+
+use_frameworks!
