@@ -92,8 +92,12 @@ class ViewController: UIViewController {
                                        initialSpringVelocity: 0.0,
                                        options: [],
                                        animations: {
+//                                        self.centerRoundShape.transform = CATransform3DMakeScale(0.5, 0.5, 1.0)
+//                                        self.launchButton?.layer.transform = CATransform3DMakeScale(0.5, 0.5, 1.0)
                                         self.launchButton?.layer.position.y -= 100
                                         self.centerRoundShape.position.y -= 100
+                                        
+                                        
                 }, completion: nil)
         }else
         {
@@ -112,7 +116,11 @@ class ViewController: UIViewController {
                                         if(self.startRecording)
                                         {
                                             self.centerRoundShape.position.y += 100
+//                                            self.launchButton?.layer.transform = CATransform3DMakeScale(1, 1, 1.0)
+//                                            self.centerRoundShape.transform = CATransform3DMakeScale(1, 1, 1.0)
+
                                         }
+                                        
             }, completion: nil)
             
             
