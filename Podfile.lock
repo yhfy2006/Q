@@ -1,10 +1,13 @@
 PODS:
+  - EasyAnimation (1.0.5)
   - UIColor_Hex_Swift (2.1)
 
 DEPENDENCIES:
+  - EasyAnimation
   - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
+  EasyAnimation: 32821f37dd39187e7364369a3d8f65d38405cf1d
   UIColor_Hex_Swift: e91dc51f6bf252ec7bf74c8704ceedeeb7640c1c
 
 COCOAPODS: 0.39.0

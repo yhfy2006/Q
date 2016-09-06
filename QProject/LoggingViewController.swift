@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     let centerRoundShape = CAShapeLayer()
     var statusPointView = UIView()
     var startAnimation = CAKeyframeAnimation(keyPath: "position")
+    
+    var startRecording = false
     var animating = false
     
     let ringBlue = Util.hexStringToUIColor("25BFF0").CGColor
@@ -23,13 +25,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //launchButton?.layer.addSublayer(centerRoundShape)
-
-
-        //launchButton?.layer.insertSublayer(centerRoundShape, above: launchButton?.layer)
-        //launchButton?.layer.insertSublayer(centerRoundShape, atIndex: 0)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -41,12 +36,14 @@ class ViewController: UIViewController {
     
     func initView() {
         let radis = launchButton!.bounds.size.width/2.0 + 10
-        centerRoundShape.path = Util.makeCircleAtLocation(view.center, radius: radis).CGPath
+        centerRoundShape.path = Util.makeCircleAtLocation(self.launchButton!.center, radius: radis).CGPath
         
         centerRoundShape.strokeColor = self.buttonGrey
         centerRoundShape.fillColor = nil
         centerRoundShape.lineWidth = 3.0
-        //centerRoundShape.bounds = CGPathGetPathBoundingBox(centerRoundShape.path)
+        //centerRoundShape.frame = CGRectMake(0, 0, launchButton!.bounds.size.width/2.0 + 10, launchButton!.bounds.size.width/2.0 + 10)
+        //self.launchButton?.layer.addSublayer(centerRoundShape)
+        
         view.layer.addSublayer(centerRoundShape)
         
         // start building animation path
@@ -83,12 +80,51 @@ class ViewController: UIViewController {
             self.animating = false
             self.centerRoundShape.strokeColor = self.buttonGrey
             self.statusPointView.hidden = true
+            
+            
+//            UIView.animateWithDuration(.5, animations: {
+//                self.launchButton?.layer.position.y -= 100
+//                self.centerRoundShape.position.y -= 100
+//            })
+            
+            UIView.animateWithDuration(1.0, delay: 0.0,
+                                       usingSpringWithDamping: 0.25,
+                                       initialSpringVelocity: 0.0,
+                                       options: [],
+                                       animations: {
+                                        self.launchButton?.layer.position.y -= 100
+                                        self.centerRoundShape.position.y -= 100
+                }, completion: nil)
         }else
         {
+            
             self.statusPointView.layer.addAnimation(self.startAnimation, forKey: "Move7")
             self.animating = true
             self.centerRoundShape.strokeColor = self.ringBlue
             self.statusPointView.hidden = false
+            
+            UIView.animateWithDuration(1.0, delay: 0.0,
+                                       usingSpringWithDamping: 0.25,
+                                       initialSpringVelocity: 0.0,
+                                       options: [],
+                                       animations: {
+                                        self.launchButton?.center = self.view.center
+                                        if(self.startRecording)
+                                        {
+                                            self.centerRoundShape.position.y += 100
+                                        }
+            }, completion: nil)
+            
+            
+//            UIView.animateWithDuration(1.0, animations: {
+//                self.launchButton?.center = self.view.center
+//                if(self.startRecording)
+//                {
+//                   self.centerRoundShape.position.y += 100
+//                }
+//            })
+            
+            self.startRecording = true
         }
     
     }

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EasyAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DCB8E9C0E4453463520AEF173111E659</key>
+		<key>11A03665D0A90CDB2B8DE310D6E5DFC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0CA6DBABBEC8D0FC4A7B1E5959E81D7</key>
+		<key>996FDFCC777D0433906248A7AC3F5C32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A376E868ED408EE8EEBD1DDBCE639EF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

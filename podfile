@@ -1,4 +1,5 @@
 platform :ios, ‘8.0’
 pod 'UIColor_Hex_Swift'
+pod 'EasyAnimation'
 
 use_frameworks!

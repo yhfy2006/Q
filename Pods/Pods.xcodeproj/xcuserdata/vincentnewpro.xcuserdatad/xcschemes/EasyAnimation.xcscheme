@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8E7A9A9CF556214A8982FA12'
-               BlueprintName = 'UIColor_Hex_Swift'
+               BlueprintIdentifier = 'E1191706B83B5DCB75745640'
+               BlueprintName = 'EasyAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'UIColor_Hex_Swift.framework'>
+               BuildableName = 'EasyAnimation.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
